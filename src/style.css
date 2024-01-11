@@ -1,0 +1,16 @@
+* {
+    font-family: roboto, system-ui;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.restaurantFoto {
+    width: 400px;
+}
+
+.restaurantDescription {
+    font-size: 15px + 0.1em;
+    font-style: italic;
+}
