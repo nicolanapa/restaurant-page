@@ -6,8 +6,7 @@ At, ea sit rem commodi, repellendus corporis omnis maxime dignissimos repellat s
 */
 import immagine from "./restaurant-image.jpg";
 
-function startPage() {
-    const content = document.querySelector("#content");
+function startPage(content) {
     const mainPage = document.createElement("div");
     mainPage.setAttribute("id", "mainPage");
 
@@ -22,6 +21,11 @@ function startPage() {
     let restaurantDescription = document.createElement("p");
     restaurantDescription.innerText = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae adipisci inventore veniam necessitatibus fugiat, eos eligendi a officiis non magni molestiae incidunt rem illo, sapiente maiores dolores neque possimus exercitationem. At, ea sit rem commodi, repellendus corporis omnis maxime dignissimos repellat sed laborum quis ipsam ipsa ut vel pariatur est quidem harum adipisci accusamus voluptas?";
     restaurantDescription.classList.add("restaurantDescription");
+
+    mainPage.style.cssText = "display: grid; grid-template: 150px 500px / 1fr 2fr; grid-template-areas: 'title text' '. image'; padding: 10px; margin-top: 20px;";
+    title.style.cssText = "font-weight: bold; grid-area: title;";
+    image.style.cssText = "height: 500px; grid-area: image; justify-self: center;";
+    restaurantDescription.style.cssText = "font-size: 15px + 0.1em; font-style: italic; grid-area: text; padding: 15px 15px 0 15px;";
 
     content.appendChild(mainPage);
 

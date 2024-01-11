@@ -9,11 +9,7 @@ module.exports = {
     },
     devtool: "inline-source-map",
     module: {
-        rules: [ 
-            {
-                test: /\.css$/i,
-                use:["style-loader", "css-loader"],
-            },
+        rules: [
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: "asset/resource",

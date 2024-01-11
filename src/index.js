@@ -1,4 +1,7 @@
 import startPage from "./dom-starter";
-import "./style.css";
+import tabSwitching from "./tab-switching";
+const content = document.querySelector("#content");
+document.body.style.cssText = "font-family: roboto, system-ui; padding: 0; margin: 0;"
 
-startPage();
+startPage(content);
+tabSwitching(content);
