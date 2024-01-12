@@ -42,25 +42,25 @@ function tabUpdater() {
 function tabSwitching(content) {
     const tabs = document.createElement("div");
 
-    let home = document.createElement("div");
-    let menu = document.createElement("div");
-    let contact = document.createElement("div");
+    let homeTab = document.createElement("div");
+    let menuTab = document.createElement("div");
+    let contactTab = document.createElement("div");
 
-    home.textContent = "Home";
-    menu.textContent = "Menu";
-    contact.textContent = "Contact";
+    homeTab.textContent = "Home";
+    menuTab.textContent = "Menu";
+    contactTab.textContent = "Contact";
 
     tabs.style.cssText = "display: flex; justify-content: center; gap: 100px; font-size: 35px; padding: 10px; font-weight: bold;";
-    home.style.cssText = "padding: 20px 30px; border: 2px solid black; border-radius: 20px;";
-    menu.style.cssText = "padding: 20px 30px; border: 2px solid black; border-radius: 20px;";
-    contact.style.cssText = "padding: 20px 30px; border: 2px solid black; border-radius: 20px;";
+    homeTab.style.cssText = "padding: 20px 30px; border: 2px solid black; border-radius: 20px;";
+    menuTab.style.cssText = "padding: 20px 30px; border: 2px solid black; border-radius: 20px;";
+    contactTab.style.cssText = "padding: 20px 30px; border: 2px solid black; border-radius: 20px;";
 
     content.appendChild(tabs);
-    tabs.appendChild(home);
-    tabs.appendChild(menu);
-    tabs.appendChild(contact);
+    tabs.appendChild(homeTab);
+    tabs.appendChild(menuTab);
+    tabs.appendChild(contactTab);
 
-    home.addEventListener("click", () => {
+    homeTab.addEventListener("click", () => {
         if ( clicked == 11 ) {
             clicked = 11;
         }
@@ -80,7 +80,7 @@ function tabSwitching(content) {
         }
         
     });
-    menu.addEventListener("click", () => {
+    menuTab.addEventListener("click", () => {
         /*if ( clicked == 22) {
 
         }
@@ -109,7 +109,7 @@ function tabSwitching(content) {
             tabUpdater();
         }
     });
-    contact.addEventListener("click", () => {
+    contactTab.addEventListener("click", () => {
         if ( clicked == 11 ) {
             clicked = 11;
             startPageRemover();
