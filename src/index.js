@@ -8,35 +8,35 @@ let clicked = 0;
 
 
 function tabUpdater() {
-    if ( clicked == 1 ) {
-        clicked = 1;
+    /*if ( clicked == 1 ) {
+        clicked = 11;
         //mainPage.remove();
         //menus.remove();
-        startPageRemover(content);
+        //startPage(content);
         menuRemover(content);
         contactRemover(content);
         startPage(content);
     }
     else if ( clicked == 2 ) {
-        clicked = 2;
+        clicked = 22;
+        //menu(content);
         startPageRemover(content);
-        menuRemover(content);
         contactRemover(content);
         //content.appendChild(menus);
         menu(content);
     }
     else if ( clicked == 3 ) {
-        clicked = 3;
+        clicked = 33;
+        //contact(content);
         startPageRemover(content);
         menuRemover(content);
-        contactRemover(content);
         contact(content);
         
-    }
-    else if ( clicked == 0 ) {
+    }*/
+    //else if ( clicked == 0 ) {
         startPage(content);
-        clicked = -1;
-    }
+        clicked = 11;
+    //}
 }
 
 function tabSwitching(content) {
@@ -61,8 +61,18 @@ function tabSwitching(content) {
     tabs.appendChild(contact);
 
     home.addEventListener("click", () => {
-        if ( clicked == -1 ) {
-
+        if ( clicked == 11 ) {
+            clicked = 11;
+        }
+        else if ( clicked == 22 ) {
+            clicked = 22;
+            menuRemover(content);
+            startPage(content);
+        }
+        else if ( clicked == 33) {
+            clicked = 33;
+            contactRemover(remover);
+            startPage(content);
         }
         else {
             clicked = 1;
@@ -71,12 +81,51 @@ function tabSwitching(content) {
         
     });
     menu.addEventListener("click", () => {
-        clicked = 2;
-        tabUpdater();
+        /*if ( clicked == 22) {
+
+        }
+        else if ( clicked == 11) {
+
+        }
+        else {
+            clicked = 2;
+            tabUpdater();
+        }*/
+        if ( clicked == 11 ) {
+            clicked = 11;
+            startPageRemover(content);
+            menu(content);
+        }
+        else if ( clicked == 22 ) {
+            clicked = 22;
+        }
+        else if ( clicked == 33) {
+            clicked = 33;
+            contactRemover(remover);
+            menu(content);
+        }
+        else {
+            clicked = 2;
+            tabUpdater();
+        }
     });
     contact.addEventListener("click", () => {
-        clicked = 3
-        tabUpdater();
+        if ( clicked == 11 ) {
+            startPageRemover(content);
+            contact(content);
+        }
+        else if ( clicked == 22 ) {
+            menuRemover(content);
+            contact(content);
+        }
+        else if ( clicked == 33) {
+            clicked = 33;
+        }
+        else {
+            clicked = 3;
+            tabUpdater();
+        }
+        
     });
 }
 

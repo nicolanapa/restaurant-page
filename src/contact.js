@@ -16,6 +16,6 @@ function contact(content) {
     contacts.appendChild(waiter);
 }
 function contactRemover(content) {
-    content.removeChild(contacts);
+    contacts.innerHTML = "";
 }
 export { contact, contactRemover };
