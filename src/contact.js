@@ -15,7 +15,7 @@ function contact(content) {
     contacts.appendChild(vice);
     contacts.appendChild(waiter);
 }
-function contactRemover(content) {
+function contactRemover() {
     contacts.innerHTML = "";
 }
 export { contact, contactRemover };

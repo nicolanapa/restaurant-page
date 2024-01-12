@@ -33,7 +33,7 @@ function startPage(content) {
     mainPage.appendChild(image);
     mainPage.appendChild(restaurantDescription);
 }
-function startPageRemover(content) {
+function startPageRemover() {
     mainPage.innerHTML = "";
 }
 export { startPage, startPageRemover };

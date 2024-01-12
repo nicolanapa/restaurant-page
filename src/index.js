@@ -66,12 +66,12 @@ function tabSwitching(content) {
         }
         else if ( clicked == 22 ) {
             clicked = 22;
-            menuRemover(content);
+            menuRemover();
             startPage(content);
         }
         else if ( clicked == 33) {
             clicked = 33;
-            contactRemover(remover);
+            contactRemover();
             startPage(content);
         }
         else {
@@ -93,7 +93,7 @@ function tabSwitching(content) {
         }*/
         if ( clicked == 11 ) {
             clicked = 11;
-            startPageRemover(content);
+            startPageRemover();
             menu(content);
         }
         else if ( clicked == 22 ) {
@@ -101,7 +101,7 @@ function tabSwitching(content) {
         }
         else if ( clicked == 33) {
             clicked = 33;
-            contactRemover(remover);
+            contactRemover();
             menu(content);
         }
         else {
@@ -112,12 +112,12 @@ function tabSwitching(content) {
     contact.addEventListener("click", () => {
         if ( clicked == 11 ) {
             clicked = 11;
-            startPageRemover(content);
+            startPageRemover();
             contact(content);
         }
         else if ( clicked == 22 ) {
             clicked = 22;
-            menuRemover(content);
+            menuRemover();
             contact(content);
         }
         else if ( clicked == 33) {
