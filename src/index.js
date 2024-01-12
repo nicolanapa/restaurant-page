@@ -111,10 +111,12 @@ function tabSwitching(content) {
     });
     contact.addEventListener("click", () => {
         if ( clicked == 11 ) {
+            clicked = 11;
             startPageRemover(content);
             contact(content);
         }
         else if ( clicked == 22 ) {
+            clicked = 22;
             menuRemover(content);
             contact(content);
         }
