@@ -62,6 +62,7 @@ function tabSwitching(content) {
 
     homeTab.addEventListener("click", () => {
         if ( clicked == 11 ) {
+            startPageRemover();menuRemover();contactRemoverRemover();
             clicked = 11;
         }
         else if ( clicked == 22 ) {
@@ -74,11 +75,10 @@ function tabSwitching(content) {
             contactRemover();
             startPage(content);
         }
-        else {
+        /*else {
             clicked = 1;
             tabUpdater();
-        }
-        
+        }*/
     });
     menuTab.addEventListener("click", () => {
         /*if ( clicked == 22) {
@@ -97,6 +97,7 @@ function tabSwitching(content) {
             menu(content);
         }
         else if ( clicked == 22 ) {
+            startPageRemover();contactRemover();menuRemover();
             clicked = 22;
         }
         else if ( clicked == 33) {
@@ -104,10 +105,10 @@ function tabSwitching(content) {
             contactRemover();
             menu(content);
         }
-        else {
+        /*else {
             clicked = 2;
             tabUpdater();
-        }
+        }*/
     });
     contactTab.addEventListener("click", () => {
         if ( clicked == 11 ) {
@@ -121,13 +122,13 @@ function tabSwitching(content) {
             contact(content);
         }
         else if ( clicked == 33) {
+            startPageRemover();menuRemover();contactRemover();
             clicked = 33;
         }
-        else {
+        /*else {
             clicked = 3;
             tabUpdater();
-        }
-        
+        }*/
     });
 }
 
