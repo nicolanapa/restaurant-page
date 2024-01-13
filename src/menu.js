@@ -16,10 +16,10 @@ function menu(content) {
     menus.appendChild(pizza2);
 }
 function menuRemover() {
-    menus.remove();
+    menu.remove();
 }
 function menuAdder() {
-    content.appendChild(menus);
+    content.appendChild(menu);
 }
 
 export { menu, menuRemover, menuAdder };

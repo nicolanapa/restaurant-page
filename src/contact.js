@@ -17,10 +17,10 @@ function contact(content) {
     
 }
 function contactRemover() {
-    contacts.remove();
+    contact.remove();
 }
-function contactAdder(contacts) {
-    content.appendChild(contacts);
+function contactAdder(contact) {
+    content.appendChild(contact);
 }
 
 export { contact, contactRemover, contactAdder };
