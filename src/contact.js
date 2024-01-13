@@ -14,8 +14,13 @@ function contact(content) {
     contacts.appendChild(manager);
     contacts.appendChild(vice);
     contacts.appendChild(waiter);
+    
 }
 function contactRemover() {
-    contacts.innerHTML = "";
+    contacts.remove();
 }
-export { contact, contactRemover };
+function contactAdder(contacts) {
+    content.appendChild(contacts);
+}
+
+export { contact, contactRemover, contactAdder };

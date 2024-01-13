@@ -1,6 +1,6 @@
-import { startPage, startPageRemover } from "./dom-starter";
-import { menu, menuRemover } from "./menu";
-import {contact, contactRemover } from "./contact";
+import { startPage, startPageRemover, startPageAdder } from "./dom-starter";
+import { menu, menuRemover, menuAdder } from "./menu";
+import {contact, contactRemover, contactAdder } from "./contact";
 const content = document.querySelector("#content");
 document.body.style.cssText = "font-family: roboto, system-ui; padding: 0; margin: 0;"
 
@@ -35,7 +35,13 @@ function tabUpdater() {
     }*/
     //else if ( clicked == 0 ) {
         startPage(content);
-        clicked = 11;
+        startPageAdder();
+        menu(content);
+        contact(content);
+        contactAdder(contacts);
+        contactRemover();
+        clicked = 11;console.log(clicked);
+        
     //}
 }
 
@@ -62,18 +68,19 @@ function tabSwitching(content) {
 
     homeTab.addEventListener("click", () => {
         if ( clicked == 11 ) {
-            startPageRemover();menuRemover();contactRemoverRemover();
-            clicked = 11;
+            //startPageRemover();menuRemover();contactRemover();
+            //startPageAdder();
+            clicked = 11;console.log(clicked);
         }
         else if ( clicked == 22 ) {
-            clicked = 22;
+            clicked = 22;console.log(clicked);
             menuRemover();
-            startPage(content);
+            startPageAdder();
         }
         else if ( clicked == 33) {
-            clicked = 33;
+            clicked = 33;console.log(clicked);
             contactRemover();
-            startPage(content);
+            startPageAdder();
         }
         /*else {
             clicked = 1;
@@ -92,18 +99,19 @@ function tabSwitching(content) {
             tabUpdater();
         }*/
         if ( clicked == 11 ) {
-            clicked = 11;
+            clicked = 11;console.log(clicked);
             startPageRemover();
-            menu(content);
+            menuAdder();
         }
         else if ( clicked == 22 ) {
-            startPageRemover();contactRemover();menuRemover();
-            clicked = 22;
+            //startPageRemover();contactRemover();menuRemover();
+            //menuAdder();
+            clicked = 22;console.log(clicked);
         }
         else if ( clicked == 33) {
-            clicked = 33;
+            clicked = 33;console.log(clicked);
             contactRemover();
-            menu(content);
+            menuAdder();
         }
         /*else {
             clicked = 2;
@@ -112,18 +120,19 @@ function tabSwitching(content) {
     });
     contactTab.addEventListener("click", () => {
         if ( clicked == 11 ) {
-            clicked = 11;
+            clicked = 11;console.log(clicked);
             startPageRemover();
-            contact(content);
+            contactAdder(contacts);
         }
         else if ( clicked == 22 ) {
-            clicked = 22;
+            clicked = 22;console.log(clicked);
             menuRemover();
-            contact(content);
+            contactAdder(contacts);
         }
         else if ( clicked == 33) {
-            startPageRemover();menuRemover();contactRemover();
-            clicked = 33;
+            //startPageRemover();menuRemover();contactRemover();
+            //contactAdder();
+            clicked = 33;console.log(clicked);
         }
         /*else {
             clicked = 3;

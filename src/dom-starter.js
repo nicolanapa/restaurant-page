@@ -34,6 +34,9 @@ function startPage(content) {
     mainPage.appendChild(restaurantDescription);
 }
 function startPageRemover() {
-    mainPage.innerHTML = "";
+    mainPage.remove();
 }
-export { startPage, startPageRemover };
+function startPageAdder() {
+    content.appendChild(mainPage);
+}
+export { startPage, startPageRemover, startPageAdder };
